@@ -20,7 +20,9 @@ import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 import jakarta.validation.constraints.Size;
-import java.util.Date;
+
+import java.time.LocalDate;
+
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -50,19 +52,19 @@ public class Evento {
     @Basic(optional = false)
     @Column(name = "fecha", nullable = false)
     @Temporal(TemporalType.DATE)
-    private Date fecha;  
+    private LocalDate fecha;  
 
     @JsonFormat(pattern = "HH:mm:ss")
     @Basic(optional = false)
     @Column(name = "horai", nullable = false)
     @Temporal(TemporalType.TIME)
-    private Date horai; 
+    private LocalDate horai; 
 
     @JsonFormat(pattern = "HH:mm:ss")
     @Basic(optional = false)
     @Column(name = "min_toler", nullable = false)
     @Temporal(TemporalType.TIME)
-    private Date minToler; 
+    private LocalDate minToler; 
 
 
     @Size(max = 60)

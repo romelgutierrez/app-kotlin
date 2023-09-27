@@ -3,11 +3,12 @@ package pe.edu.upeu.asistencia.services;
 import java.util.List;
 import java.util.Map;
 
+import pe.edu.upeu.asistencia.dtos.EventoDto;
 import pe.edu.upeu.asistencia.models.Evento;
 
 public interface EventoService {
      
-    Evento save (Evento evento);
+    Evento save (EventoDto.EventoCrearDto evento);
 
     List<Evento> findAll();
 
@@ -15,6 +16,6 @@ public interface EventoService {
 
     Evento getEventoById(Long id);
 
-    Evento update(Evento evento, Long id);
+    Evento update(EventoDto.EventoCrearDto evento, Long id);
     
 }

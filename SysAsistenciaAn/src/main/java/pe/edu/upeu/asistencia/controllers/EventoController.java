@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import pe.edu.upeu.asistencia.dtos.EventoDto;
 import pe.edu.upeu.asistencia.models.Evento;
 import pe.edu.upeu.asistencia.services.EventoService;
 
@@ -35,7 +36,9 @@ public class EventoController {
 
      
     @PostMapping("/crear")
-    public ResponseEntity<Evento> createEvento(@RequestBody Evento evento) {
+    public ResponseEntity<Evento> createEvento(@RequestBody EventoDto.EventoCrearDto evento) {
+        
+        
         Evento data = eventoService.save(evento);
         return ResponseEntity.ok(data);
     }
@@ -54,7 +57,8 @@ public class EventoController {
     }
 
     @PutMapping("/editar/{id}")
-    public ResponseEntity<Evento> updateEvento(@PathVariable Long id, @RequestBody Evento eventoDetails) {        
+    public ResponseEntity<Evento> updateEvento(@PathVariable Long id,
+        @RequestBody EventoDto.EventoCrearDto eventoDetails) {        
         Evento updatedEvento = eventoService.update(eventoDetails, id);
         return ResponseEntity.ok(updatedEvento);
     }      
