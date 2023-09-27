@@ -53,7 +53,7 @@ import pe.edu.upeu.asistenciaupeujc.ui.navigation.Destinations
 import pe.edu.upeu.asistenciaupeujc.ui.presentation.components.ConfirmDialog
 import pe.edu.upeu.asistenciaupeujc.ui.presentation.components.Spacer
 import pe.edu.upeu.asistenciaupeujc.utils.TokenUtils
-import java.time.LocalDate
+import java.time.LocalDategit
 import java.time.format.DateTimeFormatter
 import pe.edu.upeu.asistenciaupeujc.R
 import pe.edu.upeu.asistenciaupeujc.modelo.Evento
